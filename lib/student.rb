@@ -82,7 +82,7 @@ class Student
     # returns an array of all students in grades 11 or below
   end
 
-  def self.first_X_students_in_grade_10(number)
+  def self.first_X_students_in_grade_10(grade_10_students)
     sql = <<-SQL
       SELECT *
       FROM students
