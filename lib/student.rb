@@ -88,7 +88,7 @@ class Student
       SQL
       DB[:conn].execute(sql, name).map dp |row|
          self.new_from_db(row)
-       end.first            
+       end.first
     # returns all student instances from the db
   end
 
