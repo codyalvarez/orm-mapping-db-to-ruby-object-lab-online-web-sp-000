@@ -70,14 +70,14 @@ class Student
       self.new_from_db(row)
   end
 
-  def self.students_below_12th_grade
-    sql = <<-SQL
-      SELECT *
-      FROM students
-      WHERE grade <= 12
-    SQL
-    # returns an array of all students in grades 11 or below
-  end
+  # def self.students_below_12th_grade
+  #   sql = <<-SQL
+  #     SELECT *
+  #     FROM students
+  #     WHERE grade <= 12
+  #   SQL
+  #   # returns an array of all students in grades 11 or below
+  # end
 
   def self.first_X_students_in_grade_10
     sql = <<-SQL
