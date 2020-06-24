@@ -82,17 +82,17 @@ class Student
     # returns an array of all students in grades 11 or below
   end
 
-  def self.first_X_students_in_grade_10
-    sql = <<-SQL
-      SELECT *
-      FROM students
-      WHERE GRADE = 10
-      SQL
-      DB[:conn].execute(sql, name).map do |row|
-         self.new_from_db(row)
-      end.first
-    # returns all student instances from the db
-  end
+  # def self.first_X_students_in_grade_10
+  #   sql = <<-SQL
+  #     SELECT *
+  #     FROM students
+  #     WHERE GRADE = 10
+  #     SQL
+  #     DB[:conn].execute(sql, name).map do |row|
+  #        self.new_from_db(row)
+  #     end.first
+  #   # returns all student instances from the db
+  # end
 
   def self.first_student_in_grade_10
     # returns an array of the first X students in grade 10
