@@ -74,7 +74,7 @@ class Student
     sql = <<-SQL
     SELECT *
     FROM students
-    WHERE grade =< 12
+    WHERE grade <= 12
     SQL
     # returns an array of all students in grades 11 or below
   end
