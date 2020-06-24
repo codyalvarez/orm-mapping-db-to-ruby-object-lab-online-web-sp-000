@@ -107,7 +107,7 @@ class Student
       # returns the first student in grade 10
   end
 
-  def self.all_students_in_grade_X
+  def self.all_students_in_grade_X(students)
     sql = <<-SQL
       SELECT *
       FROM students
