@@ -98,9 +98,12 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE G
+      WHERE grade = 10
     SQL
-    # returns an array of the first X students in grade 10
+    DB[:conn].execute(sql).map do |row|
+      self.new_from_db(row)
+    end.first
+      # returns the first student in grade 10
   end
 
   def self.all_students_in_grade_X
