@@ -99,4 +99,3 @@ class Student
   def self.all_students_in_grade_X
     # returns the first student in grade 10
   end
-
