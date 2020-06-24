@@ -86,7 +86,7 @@ class Student
       WHERE GRADE = 10
 
       SQL
-      DB[:conn].execute(sql, name).map dp |row|
+      DB[:conn].execute(sql, name).map do |row|
          self.new_from_db(row)
       end.first
     # returns all student instances from the db
