@@ -66,8 +66,8 @@ class Student
       WHERE grade = 9
       LIMIT 1
     SQL
-    # DB[:conn].execute(sql, name).map dp |row|
-    #   self.new_from_db(row)
+    DB[:conn].execute(sql).map dp |row|
+      self.new_from_db(row)
   end
 
   def self.students_below_12th_grade
